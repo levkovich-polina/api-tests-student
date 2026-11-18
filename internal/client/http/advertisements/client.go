@@ -8,7 +8,6 @@ import (
 	 apiRunner "api-tests-template/internal/helpers/api-runner"
 )
 
-// HttpGetMyAdvertisements выполняет GET-запрос для получения списка объявлений авторизованного пользователя
 func HttpGetAdvertisements(t *testing.T, token, textForSearch string) *http.Response {
 	return apiRunner.GetRunner().Auth(token).Create().
 		Get(path.AdvertisementsPath).
